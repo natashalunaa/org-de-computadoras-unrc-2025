@@ -8,8 +8,8 @@ Archivos: "P1Guia5" es la máquina, "sumaRPila" es el programa con la subrutina 
 
 -sumaRPila: programa que toma un número como parámetro y simula la suma gaussiana, es decir por ejemplo ingresamos el 5 y la subrutina va a hacer 5 + 4 + 3 + 2 + 1 = 15, 15 será el resultado que veremos por consola. Debido a la memoria de 256 con la que trabajamos, el número máximo posible para ingresar es el 35.
 
--subrutinas3: programa que toma 3 números como parámetros y los suma, el resultado que veremos por consola será el de la suma entre el primer y segundo parámetro y el de sumar ese valor con el tercer parámetro. 
+-subrutinas3: programa que toma 3 números como parámetros y los suma, veremos dos resultados por consola, el de la suma entre el primer y segundo parámetro y el de sumar ese valor con el tercer parámetro. 
 
 Máquina creada con CPUSim versión 4.0.11
 
-Trabajamos con una arquitectura de 16bits, por ende el OPCODE (identificar de operación) será si o si de 4bits. Tenemos dos registros de propósitos generales, A y B, ambos de 16bits cada uno. 
+Trabajamos con una arquitectura de 16bits, por ende el OPCODE (identificador de operación) será si o si de 4bits. Tenemos dos registros de propósitos generales, A y B, ambos de 16bits cada uno. 
