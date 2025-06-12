@@ -14,7 +14,7 @@ Archivos: "P1Guia5" es la máquina, "sumaRPila" es el programa con la subrutina 
 
 Máquina creada con CPUSim versión 4.0.11
 
-Trabajamos con una arquitectura de 16bits, por ende el OPCODE (identificador de operación) será si o si de 4bits. Tenemos dos registros de propósitos generales, A y B, ambos de 16bits cada uno. Contamos con la interfaz de memoria: registro MAR de 10bits para trabajar con direcciones y registro MDR de 16bits para trabajar con datos. IR (resgistro de instrucción) de 16bits, PC (program counter) de 10bits que almacena la próxima instrucción a ejecutar, BP (base pointer) de 10 bits para poder tener una dirección de referencia para acceder a v.locales y a los parámetros, SP (stack pointer) de 10bits para apuntar al tope de la pila. FLAGS de 3 bits (CO = carryOut, HALT bandera del Stop y OF = overflow). 
+Trabajamos con una arquitectura de 16bits, por ende el OPCODE (identificador de operación) será si o si de 4bits. Tenemos dos registros de propósitos generales, A y B, ambos de 16bits cada uno. Contamos con la interfaz de memoria: registro MAR de 10bits para trabajar con direcciones y registro MDR de 16bits para trabajar con datos. IR (registro de instrucción) de 16bits, PC (program counter) de 10bits que almacena la próxima instrucción a ejecutar, BP (base pointer) de 10 bits para poder tener una dirección de referencia para acceder a v.locales y a los parámetros, SP (stack pointer) de 10bits para apuntar al tope de la pila. FLAGS de 3 bits (CO = carryOut, HALT bandera del Stop y OF = overflow). 
 
 Memoria RAM con 256 direcciones de 8 bits c/u.
 Contamos con 16 instrucciones para trabajar. Tenemos que tener en cuanta en muchos casos con cuál registro trabajo, A = 0, B = 1.
