@@ -19,7 +19,7 @@ Trabajamos con una arquitectura de 16bits, por ende el OPCODE (identificador de 
 Memoria RAM con 256 direcciones de 8 bits c/u.
 Contamos con 16 instrucciones para trabajar. Tenemos que tener en cuanta en muchos casos con cuál registro trabajo, A = 0, B = 1.
 - STOP: detiene la ejecución (prendo el bit de HALT)
-- In: ingresar valores por teclado. Hago test para ver en cuál resgistro.
+- In: ingresar valores por teclado. Hago test para ver en cuál registro.
 - Out: mostrar valores por pantalla. Hago test para ver en cuál registro. 
 - Load: leer valores en la memoria.
 - Save: guardar valores en la memoria.
