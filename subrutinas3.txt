@@ -1,0 +1,44 @@
+;Programa que suma tres numeros
+;Uso de una subrutina de 3 niveles
+In A
+Push A ;primer parametro
+
+In A
+Push A ;segundo parametro
+
+In A
+Push A ;tercer parametro
+
+Call Sumo3Num ;llamo a la funcion
+
+Pop A ;libero espacio en memoria
+Pop A ;libero espacio en memoria
+
+STOP
+
+Sumo3Num:
+;Epilogo
+Push BP
+Move BP SP
+
+LoadStack B 6 ;obtengo en B el segundo parametro
+LoadStack A 8 ;obtengo en A el primer parametro
+Call SumarRegistros ;segundo nivel de la subrutina y primera suma
+LoadStack A 4 ;obtengo en A el tercer parametro
+Call SumarRegistros ;ultima suma 
+
+;Epilogo
+Pop BP
+Ret
+
+SumarRegistros:
+Save A tmp
+Add B tmp D ;el resultado de la suma queda en B
+Call Salida ;tercer nivel de la subrutina
+Ret
+
+Salida:
+Out B
+Ret
+
+tmp: .data 2 0

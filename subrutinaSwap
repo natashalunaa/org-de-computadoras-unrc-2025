@@ -1,0 +1,37 @@
+;Programa que intercambia los valores en los registros 
+;Uso de subrutina de 3 niveles
+
+In A
+In B
+Call out   ;llamo a la subrutina out 
+Call sub1  ;llamo a la subrutina sub1
+STOP
+
+sub1:
+;Prologo
+Push BP
+Move BP SP
+
+Push A  ;se pasa el registro A como parametro (v.local)
+Push B  ;se pasa el registro B como parametro (v.local)
+
+Call swap  ;segundo nivel de la subrutina
+
+Pop B  ;libera espacio en memoria y recupera el registro B
+Pop A  ;libera espacio en memoria y recupera el A original
+
+;Epilogo
+Pop BP
+Ret
+
+swap:
+Push A ;guarda A en la pila de manera temporal
+Move A B  ;copia lo que esta en el registro B en el registro A
+Pop B ;recupera el valor original de A y lo carga en B
+Call out  ;tercer nivel de la subrutina 
+Ret
+
+out:
+Out A
+Out B
+Ret

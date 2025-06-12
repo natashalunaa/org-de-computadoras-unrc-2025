@@ -1,0 +1,37 @@
+;Programa que suma los primeros N num
+;Uso de una subrutina recursiva con parametro
+In A 
+Push A      ;se pasa el registro A como parametro
+Call sum    ;llamo a la funcion
+Pop A       ;libero espacio en memoria
+
+Out B       ;muestro por consola el resultado
+STOP
+
+sum:
+;prologo
+Push BP
+Move BP SP
+
+LoadStack A 4   ;Obtiene el primer parametro
+
+Save A tmp1 
+Add B tmp1 D    ;acumulo en B lo que estaba en A
+Sub A tmp2      ;resto en 1 el valor de A
+JumpZ casoBase      ;salto al caso base
+
+;inicio recursion
+Push A      ;Se pasa el registro A como parametro
+Call sum        ;llamada a funcion
+Pop A       ;Se libera espacion en memoria
+;Fin Recursion
+
+SaveStack A 4       ;Retorna el resultado
+
+casoBase:
+;epilogo
+Pop BP
+Ret
+
+tmp1: .data 2 0
+tmp2: .data 2 1
